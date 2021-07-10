@@ -1,3 +1,47 @@
 .countdown {
-  display: none;
+  /*display: none; NEED TO SET BACK TO NONE AGAIN FOR APP LATER*/
+}
+.__reset {
+  position: absolute;
+  right: 50px;
+  top: 32px;
+  text-transform: uppercase;
+  background-color: $darkBlue;
+  padding: 0.4rem 0.8rem;
+  font-family: "Red Hat Text", sans-serif;
+  color: $softRed;
+  border: 2px dashed $grayishBlue;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.__reset:hover {
+  background-color: $darkestBlue;
+  border: 2px solid $softRed;
+}
+.__title {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0.4rem;
+  width: 16.25rem;
+  color: $white;
+  margin: auto;
+  padding: 8.75rem 0 3.475rem 0;
+}
+.__cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.__text {
+  text-transform: uppercase;
+  font-family: "Red Hat Text", sans-serif;
+  letter-spacing: 0.2rem;
+  font-size: 0.4375rem;
+  color: $grayishBlue;
+}
+.__time {
+  font-size: 1.875rem;
+  color: $softRed;
+  text-align: center;
 }

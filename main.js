@@ -31,7 +31,7 @@ countdownBtn.addEventListener('click', (e) => {
             countdownSection.style.display = 'inherit';//Shows the countdown section after setting the date
             resetBtn.style.display = 'visible';
             let selectedTime = new Date(`${countdownDate.value}T${countdownTime.value}:00`).getTime();
-            mainTitle.textContent = `WE ARE LAUNCHING SOON!`;
+            mainTitle.textContent = `WE'RE LAUNCHING SOON`;
             startCountdown (selectedTime);
         }
 })

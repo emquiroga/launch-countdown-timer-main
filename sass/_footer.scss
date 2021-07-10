@@ -1,0 +1,15 @@
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.media-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin: 2.8rem;
+  justify-content: center;
+}
+.__media-link {
+  margin: 0 1rem;
+}

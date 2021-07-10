@@ -48,6 +48,10 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ## My process
 
 -Built the start date form.
+-Stylize background for a better approach
+-Built the countdown functions
+
+-
 
 ### Built with
 
@@ -65,6 +69,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### What I learned
 
 - Select today's date as default via JS.
+- Working with Date() objects
+- Math functions for distance between the form and the countdown
 
 ### Continued development
 
