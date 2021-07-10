@@ -42,4 +42,8 @@ h1 {
   background: #343650;
   color: white;
 }
+
+.countdown {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */
