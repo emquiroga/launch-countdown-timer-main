@@ -8,6 +8,7 @@ html {
   box-sizing: inherit;
 }
 body {
+  position: relative;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -19,6 +20,17 @@ body {
   background-size: 300%, 300%;
   background-position: 40% -35%, 82% 100%;
 }
-h1 {
-  color: $white;
+.__button {
+  text-transform: uppercase;
+  background-color: $darkBlue;
+  padding: 0.4rem 0.8rem;
+  font-family: "Red Hat Text", sans-serif;
+  color: $softRed;
+  border: 2px dashed $grayishBlue;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.__button:hover {
+  background-color: $darkestBlue;
+  border: 2px solid $softRed;
 }

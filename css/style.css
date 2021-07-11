@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  position: relative;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -21,36 +22,7 @@ body {
   background-position: 40% -35%, 82% 100%;
 }
 
-h1 {
-  color: white;
-}
-
-.set-countdown {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 3rem;
-}
-
-.form-set-countdown {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  padding: 2rem;
-  border-radius: 1rem;
-  justify-content: space-between;
-  background: #343650;
-  color: white;
-}
-
-.countdown {
-  /*display: none; NEED TO SET BACK TO NONE AGAIN FOR APP LATER*/
-}
-
-.__reset {
-  position: absolute;
-  right: 50px;
-  top: 32px;
+.__button {
   text-transform: uppercase;
   background-color: #343650;
   padding: 0.4rem 0.8rem;
@@ -61,20 +33,67 @@ h1 {
   cursor: pointer;
 }
 
-.__reset:hover {
+.__button:hover {
   background-color: #191a24;
   border: 2px solid #fb6087;
 }
 
+.set-countdown {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+  height: auto;
+}
+
+.form-set-countdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 1.5rem;
+  margin: auto;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  background: #343650;
+  border-radius: 1rem;
+}
+
+label,
+input {
+  margin: 0.75rem 1rem;
+}
+
+.__submit {
+  width: 8rem;
+}
+
+.countdown {
+  display: none;
+  /*NEED TO SET BACK TO NONE AGAIN FOR APP LATER*/
+}
+
+.__reset {
+  position: absolute;
+  right: 50px;
+  top: 32px;
+}
+
 .__title {
+  margin: auto;
+  padding: 8.75rem 0 3.475rem 0;
+  width: 16.25rem;
   font-family: "Red Hat Text", sans-serif;
   font-size: 1rem;
   text-align: center;
   letter-spacing: 0.4rem;
-  width: 16.25rem;
   color: white;
-  margin: auto;
-  padding: 8.75rem 0 3.475rem 0;
 }
 
 .__cards-wrapper {
