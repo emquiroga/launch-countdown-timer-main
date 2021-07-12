@@ -10,16 +10,29 @@ html {
 }
 
 body {
-  position: relative;
   min-height: 100vh;
+  width: 100vw;
+  min-width: 375px;
   margin: 0;
   padding: 0;
   font-family: "Red Hat Text", sans-serif;
   background-color: #1e1f29;
   background-image: url(../images/bg-stars.svg), url(../images/pattern-hills.svg);
   background-repeat: no-repeat, no-repeat;
-  background-size: 300%, 300%;
-  background-position: 40% -35%, 82% 100%;
+  background-size: 250%, 300%;
+  background-position: top, bottom;
+}
+
+@media (min-width: 40em) {
+  body {
+    background-size: 150%, 175%;
+  }
+}
+
+@media (min-width: 64em) {
+  body {
+    background-size: 85%, 100%;
+  }
 }
 
 .__button {
@@ -53,7 +66,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  min-width: 13rem;
   padding: 1.5rem;
   margin: auto;
   font-family: "Red Hat Text", sans-serif;
@@ -77,6 +90,7 @@ input {
 .countdown {
   display: none;
   /*NEED TO SET BACK TO NONE AGAIN FOR APP LATER*/
+  position: relative;
 }
 
 .__reset {
@@ -96,10 +110,24 @@ input {
   color: white;
 }
 
+@media (min-width: 40em) {
+  .__title {
+    width: 30rem;
+    font-size: 1.25rem;
+  }
+}
+
 .__cards-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+@media (min-width: 40em) {
+  .__cards-wrapper {
+    width: 45rem;
+    margin: auto;
+  }
 }
 
 .__text {
@@ -110,10 +138,22 @@ input {
   color: #8486a9;
 }
 
+@media (min-width: 40em) {
+  .__text {
+    font-size: 0.875rem;
+  }
+}
+
 .__time {
   font-size: 1.875rem;
   color: #fb6087;
   text-align: center;
+}
+
+@media (min-width: 40em) {
+  .__time {
+    font-size: 3.75rem;
+  }
 }
 
 footer {
