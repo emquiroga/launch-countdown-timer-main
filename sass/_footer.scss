@@ -12,4 +12,11 @@ footer {
 }
 .__media-link {
   margin: 0 1rem;
+
+  svg path {
+    transition: fill 200ms ease-in-out;
+  }
+  &:hover svg path {
+    fill: $softRed;
+  }
 }

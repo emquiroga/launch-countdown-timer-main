@@ -19,7 +19,7 @@ body {
     url(../images/pattern-hills.svg);
   background-repeat: no-repeat, no-repeat;
   background-size: 250%, 300%;
-  background-position: top, bottom;
+  background-position: top, bottom 0% left 86%;
 
   @include breakpoint-up(medium) {
     background-size: 150%, 175%;
@@ -41,4 +41,5 @@ body {
 .__button:hover {
   background-color: $darkestBlue;
   border: 2px solid $softRed;
+  transition: 200ms ease-in-out;
 }

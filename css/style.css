@@ -20,7 +20,7 @@ body {
   background-image: url(../images/bg-stars.svg), url(../images/pattern-hills.svg);
   background-repeat: no-repeat, no-repeat;
   background-size: 250%, 300%;
-  background-position: top, bottom;
+  background-position: top, bottom 0% left 86%;
 }
 
 @media (min-width: 40em) {
@@ -49,6 +49,7 @@ body {
 .__button:hover {
   background-color: #191a24;
   border: 2px solid #fb6087;
+  transition: 200ms ease-in-out;
 }
 
 .set-countdown {
@@ -121,6 +122,7 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin: 0 2rem 0 2rem;
 }
 
 @media (min-width: 40em) {
@@ -136,6 +138,7 @@ input {
   letter-spacing: 0.2rem;
   font-size: 0.4375rem;
   color: #8486a9;
+  text-align: center;
 }
 
 @media (min-width: 40em) {
@@ -156,6 +159,13 @@ input {
   }
 }
 
+.__top,
+.__bottom {
+  background-color: #343650;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
 footer {
   position: absolute;
   left: 0;
@@ -172,5 +182,13 @@ footer {
 
 .__media-link {
   margin: 0 1rem;
+}
+
+.__media-link svg path {
+  transition: fill 200ms ease-in-out;
+}
+
+.__media-link:hover svg path {
+  fill: #fb6087;
 }
 /*# sourceMappingURL=style.css.map */

@@ -47,30 +47,27 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ## My process
 
--Built the start date form.
--Stylize background for a better approach
--Built the countdown functions
-
--
+- Built the start date form.
+- Stylize background for a better approach
+- Built the countdown functions (research and code)
+- Layout and design
+- Animation research
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- CSS/Sass
 - Flexbox
-- CSS Grid
+- JavaScript
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
 - Select today's date as default via JS.
 - Working with Date() objects
 - Math functions for distance between the form and the countdown
+- Responsive backgrounds with media queries
+- Stylize svg tags
 
 ### Continued development
 

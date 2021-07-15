@@ -26,6 +26,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin: 0 2rem 0 2rem;
 
   @include breakpoint-up(medium) {
     width: 45rem;
@@ -38,6 +39,7 @@
   letter-spacing: 0.2rem;
   font-size: 0.4375rem;
   color: $grayishBlue;
+  text-align: center;
 
   @include breakpoint-up(medium) {
     font-size: 0.875rem;
@@ -51,4 +53,10 @@
   @include breakpoint-up(medium) {
     font-size: 3.75rem;
   }
+}
+.__top,
+.__bottom {
+  background-color: $darkBlue;
+  width: 4.375rem;
+  height: 4.375rem;
 }
