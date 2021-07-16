@@ -16,7 +16,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Red Hat Text", sans-serif;
-  background-color: #1e1f29;
+  background-color: #191a24;
   background-image: url(../images/bg-stars.svg), url(../images/pattern-hills.svg);
   background-repeat: no-repeat, no-repeat;
   background-size: 250%, 300%;
@@ -53,6 +53,7 @@ body {
 }
 
 .set-countdown {
+  /*visibility: hidden; Need to change back this*/
   position: absolute;
   width: 100%;
   display: flex;
@@ -159,11 +160,60 @@ input {
   }
 }
 
-.__top,
-.__bottom {
-  background-color: #343650;
+.__card-bg {
+  position: relative;
   width: 4.375rem;
   height: 4.375rem;
+  perspective: 23rem;
+  background-color: #343650;
+  border-radius: 5px;
+}
+
+.__top,
+.__bottom {
+  width: 4.375rem;
+  height: 4.375rem;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.__top {
+  top: 0;
+}
+
+.__bottom {
+  bottom: 0;
+}
+
+.__flip-animation {
+  animation: flippinCard;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  z-index: 1;
+  background-color: #343650;
+  opacity: 0.65;
+}
+
+.__division {
+  position: absolute;
+  width: 4.375rem;
+  height: 1px;
+  top: 50%;
+  background-color: black;
+  opacity: 0.65;
+  z-index: 2;
+}
+
+@keyframes flippinCard {
+  0% {
+    transform: rotate3d(-1, 0, 0, 0deg);
+  }
+  50% {
+    transform: rotate3d(-1, 0, 0, 90deg);
+  }
+  100% {
+    transform: rotate3d(-1, 0, 0, 180deg);
+  }
 }
 
 footer {
