@@ -16,7 +16,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Red Hat Text", sans-serif;
-  background-color: #191a24;
+  background-color: #1e1f29;
   background-image: url(../images/bg-stars.svg), url(../images/pattern-hills.svg);
   background-repeat: no-repeat, no-repeat;
   background-size: 250%, 300%;
@@ -68,7 +68,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 13rem;
+  width: 12.5rem;
   padding: 1.5rem;
   margin: auto;
   font-family: "Red Hat Text", sans-serif;
@@ -123,13 +123,40 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 0 2rem 0 2rem;
+  width: 90%;
+  height: 100px;
+  margin: auto;
 }
 
 @media (min-width: 40em) {
   .__cards-wrapper {
     width: 45rem;
     margin: auto;
+  }
+}
+
+.counter__container {
+  position: relative;
+  width: 4.375rem;
+  filter: drop-shadow(16px 16px 10px #191a24);
+}
+
+@media (min-width: 40em) {
+  .counter__container {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+}
+
+.counter__card {
+  position: absolute;
+  width: 4.375rem;
+}
+
+@media (min-width: 40em) {
+  .counter__card {
+    width: 6.5rem;
+    height: 6.5rem;
   }
 }
 
@@ -140,6 +167,7 @@ input {
   font-size: 0.4375rem;
   color: #8486a9;
   text-align: center;
+  padding-top: 1rem;
 }
 
 @media (min-width: 40em) {
@@ -152,6 +180,7 @@ input {
   font-size: 1.875rem;
   color: #fb6087;
   text-align: center;
+  margin: 1rem 0;
 }
 
 @media (min-width: 40em) {
@@ -161,12 +190,19 @@ input {
 }
 
 .__card-bg {
-  position: relative;
+  position: absolute;
   width: 4.375rem;
   height: 4.375rem;
   perspective: 23rem;
   background-color: #343650;
   border-radius: 5px;
+}
+
+@media (min-width: 40em) {
+  .__card-bg {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
 }
 
 .__top,
@@ -175,6 +211,14 @@ input {
   height: 4.375rem;
   border-radius: 5px;
   position: absolute;
+}
+
+@media (min-width: 40em) {
+  .__top,
+  .__bottom {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
 }
 
 .__top {
@@ -202,6 +246,12 @@ input {
   background-color: black;
   opacity: 0.65;
   z-index: 2;
+}
+
+@media (min-width: 40em) {
+  .__division {
+    width: 6.5rem;
+  }
 }
 
 @keyframes flippinCard {

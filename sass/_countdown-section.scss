@@ -22,15 +22,43 @@
     font-size: 1.25rem;
   }
 }
+
+//Containers
+
 .__cards-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 0 2rem 0 2rem;
+  width: 90%;
+  height: 100px;
+  margin: auto;
 
   @include breakpoint-up(medium) {
     width: 45rem;
     margin: auto;
+  }
+}
+
+.counter__container {
+  position: relative;
+  width: 4.375rem;
+  filter: drop-shadow(16px 16px 10px $darkestBlue);
+
+  @include breakpoint-up(medium) {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+}
+
+//Numbers and Text
+
+.counter__card {
+  position: absolute;
+  width: 4.375rem;
+
+  @include breakpoint-up(medium) {
+    width: 6.5rem;
+    height: 6.5rem;
   }
 }
 .__text {
@@ -40,6 +68,7 @@
   font-size: 0.4375rem;
   color: $grayishBlue;
   text-align: center;
+  padding-top: 1rem;
 
   @include breakpoint-up(medium) {
     font-size: 0.875rem;
@@ -49,19 +78,27 @@
   font-size: 1.875rem;
   color: $softRed;
   text-align: center;
+  margin: 1rem 0;
 
   @include breakpoint-up(medium) {
     font-size: 3.75rem;
   }
 }
 
+//Background
+
 .__card-bg {
-  position: relative;
+  position: absolute;
   width: 4.375rem;
   height: 4.375rem;
   perspective: 23rem;
   background-color: $darkBlue;
   border-radius: 5px;
+
+  @include breakpoint-up(medium) {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
 }
 .__top,
 .__bottom {
@@ -69,6 +106,11 @@
   height: 4.375rem;
   border-radius: 5px;
   position: absolute;
+
+  @include breakpoint-up(medium) {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
 }
 .__top {
   top: 0;
@@ -92,6 +134,10 @@
   background-color: black;
   opacity: 0.65;
   z-index: 2;
+
+  @include breakpoint-up(medium) {
+    width: 6.5rem;
+  }
 }
 @keyframes flippinCard {
   0% {
