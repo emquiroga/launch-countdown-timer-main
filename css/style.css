@@ -10,9 +10,10 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
-  min-width: 375px;
+  min-width: 22.5rem;
+  min-height: 30.6rem;
   margin: 0;
   padding: 0;
   font-family: "Red Hat Text", sans-serif;
@@ -20,7 +21,7 @@ body {
   background-image: url(../images/bg-stars.svg), url(../images/pattern-hills.svg);
   background-repeat: no-repeat, no-repeat;
   background-size: 250%, 300%;
-  background-position: top, bottom 0% left 86%;
+  background-position: bottom 60vh left 0%, bottom 0% left 86%;
 }
 
 @media (min-width: 40em) {
@@ -138,7 +139,6 @@ input {
 .counter__container {
   position: relative;
   width: 4.375rem;
-  filter: drop-shadow(16px 16px 10px #191a24);
 }
 
 @media (min-width: 40em) {
@@ -196,6 +196,7 @@ input {
   perspective: 23rem;
   background-color: #343650;
   border-radius: 5px;
+  filter: drop-shadow(0px 10px 1px black);
 }
 
 @media (min-width: 40em) {
@@ -205,8 +206,7 @@ input {
   }
 }
 
-.__top,
-.__bottom {
+.__top {
   width: 4.375rem;
   height: 4.375rem;
   border-radius: 5px;
@@ -214,10 +214,26 @@ input {
 }
 
 @media (min-width: 40em) {
-  .__top,
-  .__bottom {
+  .__top {
     width: 6.5rem;
     height: 6.5rem;
+  }
+}
+
+.__bottom {
+  width: 4.375rem;
+  height: 2.1875rem;
+  border-radius: 5px;
+  position: absolute;
+  background-color: #343650;
+  z-index: 1;
+  filter: saturate(1.5) grayscale(50%);
+}
+
+@media (min-width: 40em) {
+  .__bottom {
+    width: 6.5rem;
+    height: 3.25rem;
   }
 }
 
@@ -227,15 +243,6 @@ input {
 
 .__bottom {
   bottom: 0;
-}
-
-.__flip-animation {
-  animation: flippinCard;
-  animation-duration: 1000ms;
-  animation-iteration-count: infinite;
-  z-index: 1;
-  background-color: #343650;
-  opacity: 0.65;
 }
 
 .__division {
@@ -264,6 +271,21 @@ input {
   100% {
     transform: rotate3d(-1, 0, 0, 180deg);
   }
+}
+
+.__flip-animation-inf {
+  animation: flippinCard;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  background-color: #343650;
+  opacity: 0.85;
+}
+
+.__flip-animation {
+  animation: flippinCard;
+  animation-duration: 1500ms;
+  background-color: #343650;
+  opacity: 0.85;
 }
 
 footer {

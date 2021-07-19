@@ -60,7 +60,7 @@ function countDown(date) {
     //Calling the fillcard function
     fillCard();
     //Calling the animation function
-    //animation();
+    animation();
     return time, distance;
 };
 //Filling cards
@@ -81,6 +81,7 @@ resetBtn.addEventListener('click', () => {
     console.log(resetDate);
     formSection.style.display = 'inherit';//Show again the form section
     countdownSection.style.display = 'none';//Hide the countdown
+    flipSeconds.classList.add('__flip-animation-inf');
     return resetDate;
 })
 //Time expired
@@ -97,3 +98,32 @@ function expired(x){
         mainTitle.textContent = `EXPIRED`;
     }
 };
+//Animations
+let flipDays = document.getElementById("flip-days");
+let flipHours = document.getElementById("flip-hours");
+let flipMinutes = document.getElementById("flip-minutes");
+let flipSeconds = document.getElementById("flip-seconds");
+
+function animation(){
+    if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
+        flipSeconds.classList.remove('__flip-animation-inf');
+    } else if (seconds === 0) {
+        flipMinutes.classList.add('__flip-animation');
+    } else if (minutes === 0 && seconds === 0) {
+        flipHours.classList.add('__flip-animation');
+    } else if (minutes === 0 && seconds === 0 && hours === 0) {
+        flipDays.classList.add('__flip-animation');
+    } else {
+        flipMinutes.classList.remove('__flip-animation');
+        flipHours.classList.remove('__flip-animation');
+        flipDays.classList.remove('__flip-animation');
+    };
+
+// An issue with this animation code is, 
+//when you load the app, if any date is 0,
+//animations get loaded
+//Can I fix this with async?
+
+};
+
+
