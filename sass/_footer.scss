@@ -2,7 +2,10 @@ footer {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
+  background-image: url(../images/pattern-hills.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .media-wrapper {
   display: flex;

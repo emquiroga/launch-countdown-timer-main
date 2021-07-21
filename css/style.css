@@ -18,21 +18,21 @@ body {
   padding: 0;
   font-family: "Red Hat Text", sans-serif;
   background-color: #1e1f29;
-  background-image: url(../images/bg-stars.svg), url(../images/pattern-hills.svg);
-  background-repeat: no-repeat, no-repeat;
-  background-size: 250%, 300%;
-  background-position: bottom 60vh left 0%, bottom 0% left 86%;
+  background-image: url(../images/bg-stars.svg);
+  background-repeat: no-repeat;
+  background-size: 250%;
+  background-position: bottom 60vh left 0%;
 }
 
 @media (min-width: 40em) {
   body {
-    background-size: 150%, 175%;
+    background-size: 150%;
   }
 }
 
 @media (min-width: 64em) {
   body {
-    background-size: 85%, 100%;
+    background-size: 100%;
   }
 }
 
@@ -92,7 +92,6 @@ input {
 
 .countdown {
   display: none;
-  /*NEED TO SET BACK TO NONE AGAIN FOR APP LATER*/
   position: relative;
 }
 
@@ -137,26 +136,20 @@ input {
 }
 
 .counter__container {
-  position: relative;
-  width: 4.375rem;
+  width: 4.5rem;
 }
 
 @media (min-width: 40em) {
   .counter__container {
-    width: 6.5rem;
-    height: 6.5rem;
+    width: 5.5rem;
+    height: 5.5rem;
   }
 }
 
-.counter__card {
-  position: absolute;
-  width: 4.375rem;
-}
-
-@media (min-width: 40em) {
-  .counter__card {
-    width: 6.5rem;
-    height: 6.5rem;
+@media (min-width: 64em) {
+  .counter__container {
+    width: 8.75rem;
+    height: 8.75rem;
   }
 }
 
@@ -176,23 +169,54 @@ input {
   }
 }
 
+@media (min-width: 64em) {
+  .__text {
+    font-size: 1rem;
+    padding-top: 3rem;
+  }
+}
+
 .__time {
+  width: 4.5rem;
+  height: 4.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.875rem;
   color: #fb6087;
-  text-align: center;
-  margin: 1rem 0;
 }
 
 @media (min-width: 40em) {
   .__time {
-    font-size: 3.75rem;
+    width: 5.5rem;
+    height: 5.5rem;
+    font-size: 2.8rem;
   }
 }
 
+@media (min-width: 64em) {
+  .__time {
+    width: 8.75rem;
+    height: 8.75rem;
+    font-size: 3.5rem;
+  }
+}
+
+#seconds {
+  transform-origin: center;
+}
+
+#_seconds {
+  transform-origin: center;
+}
+
 .__card-bg {
-  position: absolute;
-  width: 4.375rem;
-  height: 4.375rem;
+  position: relative;
+  width: 4.5rem;
+  height: 4.5rem;
   perspective: 23rem;
   background-color: #343650;
   border-radius: 5px;
@@ -201,98 +225,172 @@ input {
 
 @media (min-width: 40em) {
   .__card-bg {
-    width: 6.5rem;
-    height: 6.5rem;
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .__card-bg {
+    width: 8.75rem;
+    height: 8.75rem;
   }
 }
 
 .__top {
-  width: 4.375rem;
-  height: 4.375rem;
+  width: 4.5rem;
+  height: 2.25rem;
   border-radius: 5px;
   position: absolute;
+}
+
+.__top::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 0 100% 0 0;
+  background-color: #191a24;
+  z-index: 2;
+}
+
+.__top::before {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 100% 0 0 0;
+  background-color: #191a24;
+  z-index: 2;
 }
 
 @media (min-width: 40em) {
   .__top {
-    width: 6.5rem;
-    height: 6.5rem;
+    width: 5.5rem;
+    height: 2.75rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .__top {
+    width: 8.75rem;
+    height: 4.375rem;
   }
 }
 
 .__bottom {
-  width: 4.375rem;
-  height: 2.1875rem;
+  width: 4.5rem;
+  height: 2.25rem;
   border-radius: 5px;
   position: absolute;
   background-color: #343650;
-  z-index: 1;
-  filter: saturate(1.5) grayscale(50%);
+  filter: contrast(0.9);
+}
+
+.__bottom::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 0 0 100% 0;
+  background-color: #191a24;
+  z-index: 2;
+}
+
+.__bottom::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 0 0 0 100%;
+  background-color: #191a24;
+  z-index: 2;
 }
 
 @media (min-width: 40em) {
   .__bottom {
-    width: 6.5rem;
-    height: 3.25rem;
+    width: 5.5rem;
+    height: 2.75rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .__bottom {
+    width: 8.75rem;
+    height: 4.375rem;
   }
 }
 
 .__top {
   top: 0;
+  background-color: #343650;
+  opacity: 1;
+  transform-origin: bottom;
 }
 
 .__bottom {
   bottom: 0;
+  background-color: #343650;
+  opacity: 1;
+  transform-origin: top;
 }
 
-.__division {
-  position: absolute;
-  width: 4.375rem;
-  height: 1px;
-  top: 50%;
-  background-color: black;
-  opacity: 0.65;
-  z-index: 2;
-}
-
-@media (min-width: 40em) {
-  .__division {
-    width: 6.5rem;
-  }
-}
-
-@keyframes flippinCard {
+@keyframes flippinCardTop {
   0% {
-    transform: rotate3d(-1, 0, 0, 0deg);
+    transform: rotate3d(0);
   }
   50% {
     transform: rotate3d(-1, 0, 0, 90deg);
   }
   100% {
-    transform: rotate3d(-1, 0, 0, 180deg);
+    transform: rotate3d(-1, 0, 0, 90deg);
   }
 }
 
-.__flip-animation-inf {
-  animation: flippinCard;
-  animation-duration: 1000ms;
-  animation-iteration-count: infinite;
-  background-color: #343650;
-  opacity: 0.85;
+@keyframes flippinCardBottom {
+  0% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+  50% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+  100% {
+    transform: rotate3d(0);
+  }
 }
 
-.__flip-animation {
-  animation: flippinCard;
-  animation-duration: 1500ms;
-  background-color: #343650;
-  opacity: 0.85;
+.__animation-top {
+  animation: 1000ms linear 0s 1 normal none running flippinCardTop;
+}
+
+.__animation-bottom {
+  animation: 1000ms linear 1000ms 1 normal none running flippinCardBottom;
+}
+
+.__animation-top-infinite {
+  animation: 1000ms linear 0s infinite normal none running flippinCardTop;
+}
+
+.__animation-bottom-infinite {
+  animation: 1000ms linear 1000ms infinite normal none running flippinCardBottom;
 }
 
 footer {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
+  background-image: url(../images/pattern-hills.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .media-wrapper {

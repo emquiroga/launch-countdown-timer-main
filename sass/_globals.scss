@@ -16,17 +16,16 @@ body {
   padding: 0;
   font-family: "Red Hat Text", sans-serif;
   background-color: $darkerBlue;
-  background-image: url(../images/bg-stars.svg),
-    url(../images/pattern-hills.svg);
-  background-repeat: no-repeat, no-repeat;
-  background-size: 250%, 300%;
-  background-position: bottom 60vh left 0%, bottom 0% left 86%;
+  background-image: url(../images/bg-stars.svg);
+  background-repeat: no-repeat;
+  background-size: 250%;
+  background-position: bottom 60vh left 0%;
 
   @include breakpoint-up(medium) {
-    background-size: 150%, 175%;
+    background-size: 150%;
   }
   @include breakpoint-up(large) {
-    background-size: 85%, 100%;
+    background-size: 100%;
   }
 }
 .__button {

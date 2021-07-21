@@ -13,7 +13,7 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; color: white; }
-    .attribution a { color: hsl(325, 45%, 44%); }
+    .attribution a { color: hsl(345, 95%, 68%); }
   </style>
 </head>
 <body>
@@ -29,62 +29,53 @@
 <section class="countdown" id="countdown-section">
   <button type="button" class="__reset __button" id="reset-button">Reset</button>
     <h1 class="__title" id="title"></h1>
+
     <div class="__cards-wrapper">
+
+      <!--Days-->
     <div class="counter__container">
       <div class="__card-bg">
-        <div class="__top" id="flip-days"></div>
-        <div class="__division"></div>
-        <div class="__bottom"></div>
+        <div class="__top" id="flip-days-t"></div>
+        <div class="__bottom" id="flip-days-b"></div>
+        <span class="__time" id="days"></span>
+        <span class="__time" id="_days"></span>
       </div>
-      <div class="counter__card">
-        <p class="__time" id="days">
-
-        </p>
-        <p class="__text">Days</p>
-      </div>
+      <p class="__text">Days</p>
     </div>
 
+      <!--Hours-->
     <div class="counter__container">
       <div class="__card-bg">
-        <div class="__top" id="flip-hours"></div>
-        <div class="__division"></div>
-        <div class="__bottom"></div>
+        <div class="__top" id="flip-hours-t"></div>
+        <div class="__bottom" id="flip-hours-b"></div>
+        <span class="__time" id="hours"></span>
+        <span class="__time" id="_hours"></span>
       </div>
-      <div class="counter__card">
-        <p class="__time" id="hours">
-          
-        </p>
-        <p class="__text">Hours</p>
-      </div>
+      <p class="__text">Hours</p>
     </div>
 
+      <!--Minutes-->
     <div class="counter__container">
       <div class="__card-bg">
-        <div class="__top" id="flip-minutes"></div>
-        <div class="__division"></div>
-        <div class="__bottom"></div>
+        <div class="__top" id="flip-minutes-t"></div>
+        <div class="__bottom" id="flip-minutes-b"></div>
+        <span class="__time" id="minutes"></span>
+        <span class="__time" id="_minutes"></span>
       </div>
-      <div class="counter__card">
-        <p class="__time" id="minutes">
-        
-        </p>
         <p class="__text">Minutes</p>
-      </div>
     </div>
 
+      <!--Seconds-->
        <div class="counter__container">
          <div class="__card-bg">
-           <div class="__top __flip-animation-inf" id="flip-seconds"></div>
-           <div class="__division"></div>
-           <div class="__bottom "></div>
+           <div class="__top" id="flip-seconds-t"></div>
+           <div class="__bottom" id="flip-seconds-b"></div>
+           <span class="__time" id="seconds"></span>
+           <span class="__time" id="_seconds"></span>
          </div>
-      <div class="counter__card">
-        <p class="__time" id="seconds">
-          
-        </p>
         <p class="__text">Seconds</p>
       </div>
-    </div>   
+
   </div>
 </section>
 <footer>
